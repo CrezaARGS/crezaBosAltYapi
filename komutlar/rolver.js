@@ -1,5 +1,5 @@
 module.exports = {
-    kod: "ping",
+    kod: "rolver",
     async run (client, message, args) {
         let k = message.mentions.members.first()
         let r = message.mentions.roles.first()
