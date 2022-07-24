@@ -4,7 +4,7 @@ require('discord-buttons')(client);
 const { MessageButton } = require('discord-buttons')
 const { MessageEmbed } = require("discord.js");
 const db = require("quick.db");
-const xra = require("./xra.json");
+const creza = require("./creza.json");
 const { readdirSync } = require('fs'); 
 const { join } = require('path');
 
@@ -36,7 +36,7 @@ client.on("message", async message => {
             client.commands.get(command).run(client, message, args);
 
         } catch {
-            console.log("Xra Ping engelleme sistemi Devreye girdi.");
+            console.log("Creza Ping engelleme sistemi Devreye girdi.");
         }
     }
 })
@@ -44,8 +44,9 @@ client.on("message", async message => {
 
 client.on('ready', () => {
   console.log(`${client.user.tag} Aktif`)
-  client.user.setActivity("Xra")
-  client.channels.cache.get("BOT SES KANAL ID").join().then(
+  client.user.setActivity("Creza was here")
+  
+    client.channels.cache.get("BOT SES KANAL ID").join().then(
     console.log("Ses kanalına bağlandım"))})
     
 client.on('voiceStateUpdate', async (___, newState) => {
@@ -60,4 +61,4 @@ client.on('voiceStateUpdate', async (___, newState) => {
 });
 
 
-client.login(xra.token)
+client.login(creza.token)
